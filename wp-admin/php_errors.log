@@ -2,3 +2,5 @@
 [04-Jun-2017 13:51:25 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\Apache24\htdocs\ov2\wp-includes\Requests\Transport\cURL.php on line 462
 [07-Jun-2017 13:37:12 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\Apache24\htdocs\ov2\wp-includes\Requests\Transport\cURL.php on line 462
 [09-Oct-2017 06:55:12 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\Apache24\htdocs\ov2\wp-admin\includes\class-wp-filesystem-direct.php on line 81
+[20-Nov-2017 12:37:05 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\Apache24\htdocs\ov-local\wp-admin\includes\class-wp-filesystem-direct.php on line 81
+[20-Nov-2017 12:39:24 UTC] PHP Parse error:  syntax error, unexpected 'define' (T_STRING) in C:\Apache24\htdocs\ov-local\wp-config.php on line 25
