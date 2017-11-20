@@ -1,0 +1,64 @@
+.genesis-nav-menu .current-menu-item > a {
+    color: #ffffff;
+}
+
+.genesis-nav-menu a:hover,
+.genesis-nav-menu .sub-menu a:hover,
+.genesis-nav-menu .sub-menu .current-menu-item > a:hover {
+    color: #31b2ed;
+}
+
+.site-header {
+    min-height: initial;    
+    background-color: #373F4C;
+}
+
+.site-header,
+.site-header a,
+.site-header .widget-title {
+    color: #ffffff;
+}
+
+.site-header .wrap {
+    padding: 10px 0;
+}
+
+.site-header .title-area {
+    float: none;
+}
+
+#logo img {
+    height: 100px;
+}
+
+#title-desc {
+    font-weight: bold;
+}
+
+.site-header .widget-area {
+    float: none;    
+}
+
+.soliloquy-container {
+    max-width: 100% !important;
+    margin: 0 auto !important;
+}
+
+.soliloquy-container .soliloquy-image {
+    width: 100%;
+}
+
+.home .entry-header {
+    display: none;
+}
+
+.banner {
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner img {    
+    display: block;
+    width: 100%;
+    height: auto;
+}

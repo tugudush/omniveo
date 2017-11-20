@@ -1,0 +1,21 @@
+@media (min-width: 768px) {
+    .title-area {
+        float: left !important;
+        width: initial;
+    }
+    
+    #logo {
+        float: left;
+    }
+
+    #title-desc {
+        display: block;
+        float: left;
+        margin-top: 40px;
+    }
+
+    .site-header .widget-area {
+        float: right;
+        width: initial;
+    }
+} /* end of @media (min-width: 768px) */

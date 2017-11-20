@@ -1,0 +1,1 @@
+[12-Jun-2017 14:45:29 UTC] WordPress database error Unknown column 'huge_it_loadDate' in 'field list' for query SELECT `huge_it_loadDate` FROM `wp_huge_itportfolio_images` made by activate_plugin, do_action('activate_portfolio-gallery/portfolio-gallery.php'), WP_Hook->do_action, WP_Hook->apply_filters, Portfolio_Gallery_Install::install, Portfolio_Gallery_Install::create_tables
