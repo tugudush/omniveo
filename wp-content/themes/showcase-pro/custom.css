@@ -117,7 +117,7 @@ a:focus {
     font-weight: bold;
 }
 
-/* features grid */
+/*** Features Grid ***/
 
 .features-grid-wrap {
 	margin-top: 70px;
@@ -169,29 +169,69 @@ a:focus {
 	clear: both;
 }
 
-.features-grid .col:hover {
-	/* color: #b6b6b6; */
+.features-grid .col:hover {		
 	/* border: 10px solid #666666;*/
+	background-size: cover;
+	background-repeat: no-repeat;	
+}
+
+#fg-services.features-grid .col:hover {
+	color: #ffffff;	
+	height: 290px;
+}
+
+#fg-products.features-grid .col:nth-child(1):hover {
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/foto_fotogrametria.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
-#fg-products.features-grid .col:nth-child(1):hover {
-	/* background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/feature-grid-bg-1.jpg);
-	background-size: cover;
-	background-repeat: no-repeat; */
-}
-
 #fg-products.features-grid .col:nth-child(2):hover {
-	/* background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/feature-grid-bg-2.jpg);
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/foto_realidad_aumentada.jpg);
 	background-size: cover;
-	background-repeat: no-repeat; */
+	background-repeat: no-repeat;
 }
 
 #fg-products.features-grid .col:nth-child(3):hover {
-	/* background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/feature-grid-bg-3.jpg);
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/fondo_vl.jpg);
 	background-size: cover;
-	background-repeat: no-repeat; */
+	background-repeat: no-repeat;
+}
+
+#fg-services.features-grid .col:nth-child(1):hover {
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/foto_geomarketing.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#fg-services.features-grid .col:nth-child(2):hover {
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/foto_geolocalizacion.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#fg-services.features-grid .col:nth-child(3):hover {
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/foto_realidad_aumentada.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#fg-services.features-grid .col:nth-child(4):hover {
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/foto_visita_virtual.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#fg-services.features-grid .col:nth-child(5):hover {
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/foto_cartografia.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#fg-services.features-grid .col:nth-child(6):hover {
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/foto_fotogrametria.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .features-grid .col img {
@@ -214,8 +254,9 @@ a:focus {
 	line-height: 1.5;
 }
 
-/* end of features grid */
+/*** End of Features Grid ***/
 
+/*** About Page ***/
 #about {
 	margin-top: 70px;
 	background-color: #ffffff;
@@ -240,6 +281,17 @@ a:focus {
 #about h2 {
 	text-align: left;
 }
+
+/*** End of About Page ***/
+
+/*** Contact Page ***/
+
+.page-contact .wpcf7-form-control-wrap {
+	display: block;
+	margin-bottom: 5px;
+}
+
+/*** End of Contact Page ***/
 
 .site-footer {
 	opacity: 1;

@@ -85,7 +85,8 @@ define( 'AUTOSAVE_INTERVAL', 300 );
 define( 'WP_POST_REVISIONS', 5 );
 define( 'EMPTY_TRASH_DAYS', 7 );
 define( 'WP_CRON_LOCK_TIMEOUT', 120 );
-/* That's all, stop editing! Happy blogging. */
+
+define( 'WPCF7_AUTOP', false );
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
