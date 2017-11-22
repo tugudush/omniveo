@@ -37,9 +37,15 @@ a:focus {
     display: none;
 }
 
+/*** Banner ***/
+
 .banner {
     width: 100%;
 /*    overflow: hidden;*/
+}
+
+.banner .logo-2 {
+	display: block;	
 }
 
 .banner-video {
@@ -61,6 +67,7 @@ a:focus {
 	font-size: 40px;
 	font-size: 4.0rem;
 	color: #ffffff;
+	margin-top: 20px;
 }
 
 .banner-text p {
@@ -93,6 +100,8 @@ a:focus {
     width: 100%;
     height: auto;
 }
+
+/*** End of Banner ***/
 
 .home .site-inner h2 {
     text-align: center;
