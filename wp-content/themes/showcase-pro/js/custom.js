@@ -112,7 +112,13 @@ jQuery(document).ready(function($) {
 
     $.fn.ie_video_fix = function(ie) {
         if(ie) {
-            $('.banner-video').css('height', 'initial');
+            $('.banner').css({
+                'overflow': 'hidden'
+            });
+
+            $('.banner-video').css({
+                'height': 'initial'
+            });
         } // end of if(ie)
     } // end of $.fn.ie_video_fix = function(ie)
     
