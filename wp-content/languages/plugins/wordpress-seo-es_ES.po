@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Yoast SEO - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-11-13 16:48:01+0000\n"
+"PO-Revision-Date: 2017-11-15 10:30:42+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,95 @@ msgstr ""
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: es\n"
 "Project-Id-Version: Plugins - Yoast SEO - Stable (latest release)\n"
+
+#. translators: %s expands to robots.txt.
+#: admin/views/tool-file-editor.php:19
+msgid "You cannot create a %s file."
+msgstr "No puedes crear un archivo %s."
+
+#. translators: %s expands to robots.txt.
+#. translators: %s expands to ".htaccess".
+#: admin/views/tool-file-editor.php:40 admin/views/tool-file-editor.php:67
+msgid "You cannot edit the %s file."
+msgstr "No puedes editar el archivo %s."
+
+#. translators: %s expands to robots.txt.
+#: admin/views/tool-file-editor.php:56
+msgid "Updated %s"
+msgstr "%s actualizado"
+
+#. translators: %s expands to robots.txt.
+#: admin/views/tool-file-editor.php:124
+msgid "Create %s file"
+msgstr "Crear archivo %s"
+
+#. translators: %s expands to robots.txt.
+#. translators: %s expands to ".htaccess".
+#: admin/views/tool-file-editor.php:164 admin/views/tool-file-editor.php:214
+msgid "Edit the content of your %s:"
+msgstr "Editar el contenido de tu %s:"
+
+#. translators: %s expands to robots.txt.
+#. translators: %s expands to ".htaccess".
+#: admin/views/tool-file-editor.php:173 admin/views/tool-file-editor.php:223
+msgid "Save changes to %s"
+msgstr "Guardar cambios a %s"
+
+#. translators: %s expands to ".htaccess".
+#: admin/views/tool-file-editor.php:185
+msgid "%s file"
+msgstr "archivo %s"
+
+#. translators: 1: link open tag; 2: link close tag; 3: Yoast; 4: linked
+#. developer name.
+#: admin/views/about.php:236
+msgid "%1$s%3$s ACF Integration%2$s - an integration built by %4$s and Team %3$s"
+msgstr "%1$s%3$s Integración con ACF%2$s - una integración creada por %4$s y su equipo %3$s"
+
+#. translators: 1,2: link open tag; 3: link close tag; 4: Yoast SEO.
+#: admin/views/about.php:260
+msgid "%1$sGlue for %4$s &amp; AMP%3$s - an integration between %2$sthe WordPress AMP plugin%3$s and %4$s."
+msgstr "%1$sGlue for %4$s &amp; AMP%3$s - una integración entre %2$sel plugin WordPress AMP%3$s y %4$s."
+
+#. translators: 1: expands to "Yoast SEO"; 2: emphasis open tag; 3: emphasis
+#. close tag.
+#: admin/views/about.php:223
+msgid "%1$s 3.0 brought a way for theme builders and custom field plugins to integrate with %1$s. These integrations make sure that %2$sall%3$s the data on your page is used for the content analysis. On this page, we highlight the frameworks that have nicely working integrations."
+msgstr "%1$s 3.0 trajo un modo de que los maquetadores de temas y los plugins de campos personalizados se integren con %1$s. Estas integraciones aseguran que %2$stodos%3$s los datos de tu página se utilicen en el análisis de contenido. En esta página destacamos frameworks que tienen integraciones que funcionan estupendamente."
+
+#: admin/views/about.php:252
+msgid "We've got other integrations we'd like to tell you about:"
+msgstr "Tenemos otras integraciones de las que nos gustaría hablarte:"
+
+#: admin/views/about.php:250
+msgid "Other integrations"
+msgstr "Otras integraciones"
+
+#. translators: %1$s expands to Yoast SEO, %2$s expands to the dependency name,
+#. %3$s expands to the install link, %4$s expands to the more info link.
+#: admin/class-suggested-plugins.php:107
+msgid "%1$s and %2$s can work together a lot better by adding a helper plugin. Please install %3$s to make your life better. %4$s."
+msgstr "%1$s y %2$s pueden funcionar juntos mucho mejor añadiendo un plugin de ayuda. Por favor, instala %3$s para hacer tu vida más fácil. %4$s."
+
+#: admin/class-suggested-plugins.php:133
+msgid "More information"
+msgstr "Más información"
+
+#. translators: %1$s expands to Yoast SEO, %2$s expands to the dependency name,
+#. %3$s expands to activation link.
+#: admin/class-suggested-plugins.php:147
+msgid "%1$s and %2$s can work together a lot better by adding a helper plugin. Please activate %3$s to make your life better."
+msgstr "%1$s y %2$s pueden funcionar juntos mucho mejor añadiendo un plugin de ayuda. Por favor, activa %3$s para hacer tu vida más fácil."
+
+#. translators: %1$s expands to Yoast SEO
+#: admin/views/about.php:214
+msgid "%1$s Integrations"
+msgstr "Integraciones con %1$s"
+
+#. translators: %1$s expands to the dependency name.
+#: admin/class-suggested-plugins.php:132
+msgid "More information about %1$s"
+msgstr "Más información sobre %1$s"
 
 #: inc/wpseo-non-ajax-functions.php:132
 msgid "Configuration Wizard"
@@ -3227,6 +3316,11 @@ msgstr "Exporta tus ajustes de %1$s, estos datos los puedes usar para importarlo
 msgid "Import settings"
 msgstr "Ajustes de importación"
 
+#. translators: 1: emphasis opener; 2: emphasis closer.
+#: admin/views/tabs/tool/wpseo-import.php:17
+msgid "Import settings by locating %1$ssettings.zip%2$s and clicking \"Import settings\""
+msgstr "Importa los ajustes localizando el archivo %1$ssettings.zip%2$s y haciendo clic en \"Importar ajustes\""
+
 #: admin/views/tool-import-export.php:95
 msgid "Import from other SEO plugins"
 msgstr "Importar de otros plugins SEO"
@@ -3238,6 +3332,23 @@ msgstr "Importar"
 #: admin/views/tool-import-export.php:76
 msgid "The old data of the imported plugin was deleted successfully."
 msgstr "Los datos antiguos del plugin importado se han borrado con éxito."
+
+#. translators: %s expands to robots.txt.
+#. translators: %s expands to ".htaccess".
+#: admin/views/tool-file-editor.php:134 admin/views/tool-file-editor.php:234
+msgid "If you had a %s file and it was editable, you could edit it from here."
+msgstr "Si tuvieses un archivo %s y tuviese permisos de escritura podrías editarlo desde aquí."
+
+#. translators: %s expands to robots.txt.
+#. translators: %s expands to ".htaccess".
+#: admin/views/tool-file-editor.php:152 admin/views/tool-file-editor.php:202
+msgid "If your %s were writable, you could edit it from here."
+msgstr "Si tu archivo %s tuviese permisos de escritura podrías editarlo desde aquí."
+
+#. translators: %s expands to robots.txt.
+#: admin/views/tool-file-editor.php:115
+msgid "You don't have a %s file, create one here:"
+msgstr "No tienes un archivo %s, crea uno aquí:"
 
 #: admin/views/tabs/advanced/rss.php:52
 msgid "A link to your site, with your site's name and description as anchor text."
@@ -3439,6 +3550,11 @@ msgstr "Puedes excluir entradas del mapa del sitio introduciendo una cadena sepa
 #: admin/views/tabs/sitemaps/general.php:44
 msgid "Max entries per sitemap"
 msgstr "Máxima cantidad de entradas por mapa del sitio"
+
+#. translators: %d expands to default number of entries per sitemap.
+#: admin/views/tabs/sitemaps/general.php:37
+msgid "Please enter the maximum number of entries per sitemap page (defaults to %d, you might want to lower this to prevent memory issues on some installs):"
+msgstr "Por favor, introduce el número máximo de entradas por página de mapa del sitio (por defecto %d, igual puede que quieras reducir esto para evitar problemas de memoria en algunas instalaciones)"
 
 #: admin/views/tabs/sitemaps/general.php:28
 msgid "Save your settings to activate your XML Sitemap."

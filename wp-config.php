@@ -22,10 +22,10 @@ set_time_limit(300);
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'omniveo');
+define('DB_NAME', 'omniveo_omniveo');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'omniveo_jerz');
 
 /** MySQL database password */
 define('DB_PASSWORD', 'accessdenied123');
@@ -85,7 +85,8 @@ define( 'AUTOSAVE_INTERVAL', 300 );
 define( 'WP_POST_REVISIONS', 5 );
 define( 'EMPTY_TRASH_DAYS', 7 );
 define( 'WP_CRON_LOCK_TIMEOUT', 120 );
-/* That's all, stop editing! Happy blogging. */
+
+define( 'WPCF7_AUTOP', false );
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
