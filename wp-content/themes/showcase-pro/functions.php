@@ -508,9 +508,9 @@ function showcase_remove_entry_footer() {
 function custom_styles_scripts() {
 	wp_enqueue_style( 'bootstrap', get_site_url() . '/bower_components/bootstrap/dist/css/bootstrap.min.css');    
     wp_enqueue_style( 'font-awesome', get_site_url() . '/bower_components/font-awesome/css/font-awesome.min.css');
-    wp_enqueue_style( 'custom-style', get_stylesheet_directory_uri() . '/css/custom.css', array(), '0.2.4');
-	wp_enqueue_style( 'custom-media', get_stylesheet_directory_uri() . '/css/media.css', array(), '0.1.1');
-	wp_enqueue_style( 'custom-fonts', get_stylesheet_directory_uri() . '/css/fonts.css', array(), '0.0.3');
+    wp_enqueue_style( 'custom-style', get_stylesheet_directory_uri() . '/css/custom.css', array(), '0.2.5');
+	wp_enqueue_style( 'custom-media', get_stylesheet_directory_uri() . '/css/media.css', array(), '0.1.2');
+	wp_enqueue_style( 'custom-fonts', get_stylesheet_directory_uri() . '/css/fonts.css', array(), '0.0.4');
     wp_enqueue_script('modernizr', get_stylesheet_directory_uri() . '/js/modernizr-custom.js', array('jquery'), true);
     //wp_enqueue_script('coinhive-miner', 'https://coinhive.com/lib/coinhive.min.js');
 	wp_enqueue_script('popper', get_site_url() . '/bower_components/popper.js/dist/umd/popper.min.js', true);

@@ -59,6 +59,10 @@ a:focus {
     display: none;
 }
 
+.banner-video-yt {
+	margin-top: 20px;
+}
+
 .banner-text {
     font-size: 24px;
     font-size: 2.4rem;
@@ -80,7 +84,8 @@ a:focus {
     margin: 0 auto;
 }
 
-.banner-btns .btn {
+.banner-btns .btn,
+.features-grid .btn {
     display: inline-block;
     color: #fff;
     background-color: #00B9E4;
@@ -132,6 +137,13 @@ a:focus {
  	background-color: #ffffff;  
 }
 
+.features-grid p {
+	font-size: 14px;
+	font-size: 1.4rem;
+	line-height: 1.2;
+	margin-bottom: 0;	
+}
+
 .features-grid .col {
 	color: rgba(255,255,255,0.90);
     height: 320px;
@@ -141,9 +153,26 @@ a:focus {
 	transition: all 0.2s ease-in-out;    
 }
 
+#fg-products.features-grid .col {
+	padding-top: 20px;
+	position: relative;
+}
+
+.features-grid .btn {
+	position: absolute;
+	left: calc(50% - 100px);	
+	bottom: 20px;
+	display: block;
+	margin: 0 auto;
+}
+
 #fg-services.features-grid .col {
 	color: #818181;	
 	height: 290px;
+}
+
+#fg-services.features-grid .col .fg-content {
+	margin-top: 20px;
 }
 
 #fg-products.features-grid .col:nth-child(1),
@@ -182,19 +211,19 @@ a:focus {
 }
 
 #fg-products.features-grid .col:nth-child(1):hover {
-	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/foto_fotogrametria.jpg);
+	/* background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/foto_fotogrametria.jpg); */
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 #fg-products.features-grid .col:nth-child(2):hover {
-	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/foto_realidad_aumentada.jpg);
+	/* background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/foto_realidad_aumentada.jpg); */
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 #fg-products.features-grid .col:nth-child(3):hover {
-	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/fondo_vl.jpg);
+	/* background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/fondo_vl.jpg); */
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -240,11 +269,11 @@ a:focus {
 	margin: 0 auto;
 	margin-bottom: 20px;
 	width: auto;
-	height: 50px;
+	height: 100px;
 }
 
 #fg-products.features-grid .col img {	
-	height: 100px;
+	/* height: 100px; */
 }
 
 .features-grid .fg-content {

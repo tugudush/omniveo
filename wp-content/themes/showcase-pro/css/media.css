@@ -120,6 +120,10 @@
 } /* end of @media (max-width: 799px) */
 
 @media (max-width: 767px) {
+    .banner-text h2 {
+        color: #000000;
+    }
+
 	#about .img {
 		display: none;
 	}
