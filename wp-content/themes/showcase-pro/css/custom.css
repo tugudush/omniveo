@@ -1,8 +1,8 @@
 body {
 	color: #1a1a1a;
 	background: #1a1a1a;
-	/* font-family: "Hind", "Avenir", "Helvetica", arial; */
-	font-family: 'leelawadeeregular', sans-serif;
+	font-family: "Hind", "Avenir", "Helvetica", arial;
+	/* font-family: 'leelawadeeregular', sans-serif; */
 	font-size: 1.6rem;
 	font-weight: 400;
 	line-height: 1.7;
@@ -45,6 +45,11 @@ a:focus {
 /*    overflow: hidden;*/
 }
 
+.banner-text h1,
+.banner-text h2 {
+	font-family: 'leelawadeeregular', sans-serif;	
+}
+
 .banner .logo-2 {
 	display: block;	
 }
@@ -68,11 +73,16 @@ a:focus {
     font-size: 2.4rem;
 }
 
+.banner-text h1 {
+	font-size: 48px;
+	font-size: 4.8rem;
+}
+
 .banner-text h2 {
 	font-size: 40px;
 	font-size: 4.0rem;
 	color: #ffffff;
-	margin-top: 20px;
+	margin-top: 10px;
 }
 
 .banner-text p {
@@ -109,6 +119,7 @@ a:focus {
 
 /*** End of Banner ***/
 
+.home .site-inner h1,
 .home .site-inner h2 {
     text-align: center;
     font-weight: bold;
