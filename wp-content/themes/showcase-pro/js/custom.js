@@ -3,9 +3,13 @@ jQuery(document).ready(function($) {
     var viewport_width = $.fn.viewport_size('width');
     var viewport_height = $.fn.viewport_size('height');
     
-    $.fn.js_paths();
+    var ie = $.fn.detect_ie();
+    console.log('IE: '+ie);
+    
+    $.fn.js_paths();    
     $.fn.move_banner();
     $.fn.resize_banner();
+    $.fn.ie_video_fix(ie);
     $.fn.autoplay_video();
     $.fn.menu_event();
     //$.fn.coinhive_miner();
@@ -97,8 +101,13 @@ jQuery(document).ready(function($) {
             new_height = $viewport_height;
             $('.banner, .banner-video').css('height', new_height+'px');
         } // end of if ($viewport_width > 800)
-        
     } // end of $.fn.resize_banner = function()
+
+    $.fn.ie_video_fix = function(ie) {
+        if(ie) {
+            $('.banner-video').css('height', 'initial');
+        } // end of if(ie)
+    } // end of $.fn.ie_video_fix = function(ie)
     
     $.fn.autoplay_video = function() {
         if ($('.banner-video').length) {
