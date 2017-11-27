@@ -5,7 +5,8 @@ jQuery(document).ready(function($) {
     
     var ie = $.fn.detect_ie();
     console.log('IE: '+ie);
-    
+    $.fn.ie_warning(ie);
+
     $.fn.js_paths();    
     $.fn.move_banner();
     $.fn.resize_banner();
@@ -80,7 +81,13 @@ jQuery(document).ready(function($) {
         var language = $('html').attr('lang');
         return language;
         //console.log('language: '+language);
-    } // end of $.fn.get_lang = function()    
+    } // end of $.fn.get_lang = function() 
+    
+    $.fn.ie_warning = function(ie) {        
+        if(ie <= 11) {
+            alert('You are using an outdated browser (IE v'+ie+').\nWebpage elements may not render correctly.\nPlease upgrade to Microsoft Edge or use other browser such Chrome or Firefox.\nNOTE: Microsoft Edge is only available on Windows 10.');
+        }
+    } // end of $.fn.ie_warning = function(ie)
     
     $.fn.js_paths = function() {
         console.log('document.URL: ' + document.URL);
