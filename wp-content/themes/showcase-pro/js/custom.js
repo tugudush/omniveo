@@ -84,7 +84,7 @@ jQuery(document).ready(function($) {
     } // end of $.fn.get_lang = function() 
     
     $.fn.ie_warning = function(ie) {        
-        if(ie <= 11) {
+        if(ie <= 11 && ie != false) {
             alert('You are using an outdated browser (IE v'+ie+').\nWebpage elements may not render correctly.\nPlease upgrade to Microsoft Edge or use other browser such Chrome or Firefox.\nNOTE: Microsoft Edge is only available on Windows 10.');
         }
     } // end of $.fn.ie_warning = function(ie)
