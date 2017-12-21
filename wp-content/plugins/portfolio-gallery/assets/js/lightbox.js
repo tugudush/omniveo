@@ -1,5 +1,4 @@
 (function ($) {
-
     'use strict';
     jQuery.each(portfolio_resp_lightbox_obj, function(index, value) {
         if(value.indexOf('true')>-1 || value.indexOf('false')>-1)

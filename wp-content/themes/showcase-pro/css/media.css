@@ -1,0 +1,130 @@
+@media (min-width: 768px) {
+	#about.wrap {		
+		height: 75vh;
+	}
+	
+	#about .img {
+		float: left;
+		width: 50%;
+	}
+	
+	#about-content {
+		float: left;
+		width: 50%;
+    }
+    
+    .page-contact .wpcf7 {
+        width: 640px;
+        margin: 0 auto;
+    }
+	
+	#footer-contact-info {
+		float: left;
+	}
+	
+	#footer-social {
+		float: right;
+	}
+} /* end of @media (min-width: 768px) */
+
+@media (min-width: 800px) {
+    body.home .site-inner {
+        padding-top: 0;
+    }
+    
+    body.home.header-scroll .site-inner {
+        /* padding-top: 150px; */
+    }
+    
+    .site-header {
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 0 2rem rgba(0,0,0,0.05);
+        padding: 0 !important;
+    }
+    
+    .home .site-header {
+        box-shadow: none;
+    }
+    
+    .header-scroll .site-header {
+        box-shadow: 0 0 2rem rgba(0,0,0,0.05);
+    }
+    
+    .nav-primary {
+        float: left;        
+    }
+    
+    .nav-primary .genesis-nav-menu > li > a {
+        color: #1a1a1a;
+        font-weight: bold;        
+        text-align: center;
+        margin: 0;
+        padding: 30px 15px;
+        box-sizing: border-box;        
+    }
+    
+    .home .nav-primary .genesis-nav-menu > li > a {
+        color: #ffffff;
+        text-shadow: 1px 1px 1px #000000;
+    }
+    
+    .header-scroll .nav-primary .genesis-nav-menu > li > a {
+        text-shadow: none;
+    }
+    
+    .home.header-scroll .nav-primary .genesis-nav-menu > li > a {
+        color: #1a1a1a;
+    }
+    
+    .nav-primary .genesis-nav-menu > li > a:hover {
+        /* border-bottom: 4px solid #00B9E7; */
+        /* padding: 26px 15px; */
+        padding: 0 15px;
+    }
+    
+    .banner-text {
+        position: absolute;
+        color: #ffffff;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+    }
+    
+    .content {
+        width: 100%;        
+    }
+    
+    .full-width-content .content {
+        max-width: initial;
+    }
+
+} /* end of @media (min-width: 800px) */
+
+@media (min-width: 992px) {
+	#fg-services.features-grid .col {
+		border-left: 1px solid #F0F0F0;
+		border-bottom: 1px solid #F0F0F0;
+	}
+} /* end of @media (min-width: 992px) */
+
+@media (max-width: 799px) {
+    .banner-text {
+        display: table;
+        margin: 0 auto;
+        color: #000000;
+        text-shadow: initial;
+        padding: 0 5%;
+    }
+    
+    .banner-btns .btn {    
+        width: 150px;        
+    }
+} /* end of @media (max-width: 799px) */
+
+@media (max-width: 767px) {
+    .banner-text h2 {
+        color: #000000;
+    }
+
+	#about .img {
+		display: none;
+	}
+}

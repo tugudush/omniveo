@@ -788,7 +788,6 @@ jQuery(function() {
                     };
 
                 setTimeout( jQuery.proxy( function() {
-
                     if( typeof this.$largeImg !== 'undefined' ) {
                         this.$largeImg.fadeOut( 'fast' );
                     }

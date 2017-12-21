@@ -222,6 +222,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 #huge_it_portfolio_content_<?php echo $portfolioID; ?> .og-fullimg iframe {
     width: 100%;
     border: none;
+    height: 82%!important;
 }
 
 @media (max-width: 767px){
