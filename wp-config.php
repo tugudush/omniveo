@@ -22,10 +22,10 @@ set_time_limit(300);
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'omniveo_omniveo');
+define('DB_NAME', 'omniveo');
 
 /** MySQL database username */
-define('DB_USER', 'omniveo_jerz');
+define('DB_USER', 'root');
 
 /** MySQL database password */
 define('DB_PASSWORD', 'accessdenied123');
