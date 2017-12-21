@@ -68,6 +68,10 @@ class Portfolio_Gallery_Frontend_Scripts {
 		if ( ! wp_script_is( 'jquery' ) ) {
 			wp_enqueue_script( 'jquery' );
 		}
+
+        wp_register_script( 'hugeitmicro-min-js', plugins_url( '../assets/js/jquery.hugeitmicro.min.js', __FILE__ ), array( 'jquery' ), '1.0.0', true );
+        wp_enqueue_script( 'hugeitmicro-min-js');
+
 		if ( get_option('portfolio_gallery_lightbox_type') == 'old_type' ) {
 			wp_register_script( 'jquery.pcolorbox-js', plugins_url( '../assets/js/jquery.colorbox.js', __FILE__ ), array( 'jquery' ), '1.0.0', true );
 			wp_enqueue_script( 'jquery.pcolorbox-js' );
@@ -83,10 +87,9 @@ class Portfolio_Gallery_Frontend_Scripts {
 			wp_enqueue_script( 'froogaloop2-min-js' );
 		}}
 
-		wp_register_script( 'hugeitmicro-min-js', plugins_url( '../assets/js/jquery.hugeitmicro.min.js', __FILE__ ), array( 'jquery' ), '1.0.0', true );
-		wp_enqueue_script( 'hugeitmicro-min-js' );
 
-		wp_register_script( 'front-end-js-' . $view_slug, plugins_url( '../assets/js/view-' . $view_slug . '.js', __FILE__ ), array( 'jquery' ), '1.0.0', true );
+
+		wp_register_script( 'front-end-js-' . $view_slug, plugins_url( '../assets/js/view-' . $view_slug . '.js', __FILE__ ), array( 'jquery' ,'hugeitmicro-min-js'), '1.0.0', true );
 		wp_enqueue_script( 'front-end-js-' . $view_slug );
 
 		wp_register_script( 'portfolio-custom-js', plugins_url( '../assets/js/custom.js', __FILE__ ), array( 'jquery' ), '1.0.0', true );
@@ -108,8 +111,8 @@ class Portfolio_Gallery_Frontend_Scripts {
 			wp_enqueue_script( 'classie-js' );
 			wp_register_script( 'jquery.elastislide-js', plugins_url( '../assets/js/jquery.elastislide.js', __FILE__ ), array( 'jquery' ), '1.0.0', false );
 			wp_enqueue_script( 'jquery.elastislide-js' );
-			wp_register_script( 'jquery.hoverdir-js', plugins_url( '../assets/js/jquery.hoverdir.js', __FILE__ ), array( 'jquery' ), '1.0.0', false );
-			wp_enqueue_script( 'jquery.hoverdir-js' );
+			wp_register_script( 'hoverdir.js', plugins_url( '../assets/js/jquery.hoverdir.js', __FILE__ ), array( 'jquery' ), '1.0.0', false );
+			wp_enqueue_script( 'hoverdir.js' );
 			wp_register_script( 'portfolio-gallery-elastic_grid-js', plugins_url( '../assets/js/elastic_grid.js', __FILE__ ), array( 'jquery' ), '1.3.0', false );
 			wp_enqueue_script( 'portfolio-gallery-elastic_grid-js' );
 		}
@@ -267,10 +270,10 @@ class Portfolio_Gallery_Frontend_Scripts {
 					$big_img  = "https://www.youtube.com/embed/" . $videourl[0];
 				} elseif ( portfolio_gallery_youtube_or_vimeo_portfolio( $thumbnail ) == 'vimeo' ) {
 					$videourl = portfolio_gallery_get_video_id_from_url( $thumbnail );
-					$hash     = unserialize( wp_remote_fopen( "http://vimeo.com/api/v2/video/" . $videourl[0] . ".php" ) );
+					$hash     = unserialize( wp_remote_fopen( "https://vimeo.com/api/v2/video/" . $videourl[0] . ".php" ) );
 					$smal_img = esc_url( $hash[0]['thumbnail_large'] );
 					$videourl = portfolio_gallery_get_video_id_from_url( $thumbnail );
-					$big_img  = "http://player.vimeo.com/video/" . $videourl[0];
+					$big_img  = "https://player.vimeo.com/video/" . $videourl[0];
 				}
 				array_push( $thumbs, $smal_img );
 				array_push( $larg_images, $big_img );

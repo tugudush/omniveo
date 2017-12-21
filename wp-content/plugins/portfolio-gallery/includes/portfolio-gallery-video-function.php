@@ -68,7 +68,7 @@ if ( ! function_exists( 'youtube_or_vimeo_portfolio' ) ) {
 			$vimeo         = $image_url;
 			$vimeo_explode = explode( "/", $vimeo );
 			$imgid         = end( $vimeo_explode );
-			$hash          = unserialize( wp_remote_fopen( "http://vimeo.com/api/v2/video/" . $imgid . ".php" ) );
+			$hash          = unserialize( wp_remote_fopen( "https://vimeo.com/api/v2/video/" . $imgid . ".php" ) );
 			$imgsrc        = $hash[0]['thumbnail_large'];
 			$thumburl      = $imgsrc;
 		}

@@ -58,7 +58,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 								break;
 							case 'vimeo':
 								$videourl = portfolio_gallery_get_video_id_from_url( $imgurl[0] );
-								$hash = unserialize( wp_remote_fopen( "http://vimeo.com/api/v2/video/" . $videourl[0] . ".php" ) );
+								$hash = unserialize( wp_remote_fopen( "https://vimeo.com/api/v2/video/" . $videourl[0] . ".php" ) );
 								$imgsrc = $hash[0]['thumbnail_large'];
 								?>
 								<a class="portfolio-group<?php echo esc_attr($group_key1); ?> huge_it_portfolio_item pvimeo portfolio-group-slider_<?php echo esc_attr($portfolioID); ?>_<?php echo esc_attr($group_key1); ?>   add-H-relative add-H-block"
@@ -114,7 +114,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 											break;
 										case 'vimeo':
 											$videourl = portfolio_gallery_get_video_id_from_url( $img );
-											$hash = unserialize( wp_remote_fopen( "http://vimeo.com/api/v2/video/" . $videourl[0] . ".php" ) );
+											$hash = unserialize( wp_remote_fopen( "https://vimeo.com/api/v2/video/" . $videourl[0] . ".php" ) );
 											$imgsrc = $hash[0]['thumbnail_large']; ?>
 											<li>
 												<a class="portfolio-group<?php echo esc_attr($group_key1); ?> huge_it_portfolio_item pvimeo portfolio-group-slider_<?php echo esc_attr($portfolioID); ?>_<?php echo esc_attr($group_key1); ?>  add-H-relative"
