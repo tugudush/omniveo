@@ -1,72 +1,77 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
-class Portfolio_Gallery_Install {
 
-    public static function init() {
-        add_action( 'init', array( __CLASS__, 'check_version' ), 5 );
+class Portfolio_Gallery_Install
+{
+
+    public static function init()
+    {
+        add_action('init', array(__CLASS__, 'check_version'), 5);
     }
+
     /**
      * Check Portfolio Gallery version and run the updater is required.
      *
      * This check is done on all requests and runs if the versions do not match.
      */
-    public static function check_version() {
+    public static function check_version()
+    {
 
 
-        if(get_option( 'portfolio_gallery_version' ) !== Portfolio_Gallery()->version ){
+        if (get_option('portfolio_gallery_version') !== Portfolio_Gallery()->version) {
 
             self::install();
-            update_option( 'portfolio_gallery_version',Portfolio_Gallery()->version );
+            update_option('portfolio_gallery_version', Portfolio_Gallery()->version);
         }
     }
 
-    public static function install_options() {
+    public static function install_options()
+    {
 
-        if( !get_option( 'portfolio_gallery_lightbox_type' ) ) {
-            if (!get_option( 'portfolio_gallery_version' )) {
-                update_option( 'portfolio_gallery_lightbox_type', 'new_type' );
-            }
-            else {
-                update_option( 'portfolio_gallery_lightbox_type', 'old_type' );
+        if (!get_option('portfolio_gallery_lightbox_type')) {
+            if (!get_option('portfolio_gallery_version')) {
+                update_option('portfolio_gallery_lightbox_type', 'new_type');
+            } else {
+                update_option('portfolio_gallery_lightbox_type', 'old_type');
             }
         }
 
-        if( !get_option( 'portfolio_gallery_admin_image_hover_preview' ) ) {
-            update_option( 'portfolio_gallery_admin_image_hover_preview', 'on' );
-            update_option( 'portfolio_gallery_version', '2.2.0' );
+        if (!get_option('portfolio_gallery_admin_image_hover_preview')) {
+            update_option('portfolio_gallery_admin_image_hover_preview', 'on');
+            update_option('portfolio_gallery_version', '2.2.0');
         }
 
         $portfolio_new_columns = array(
-            array('categories','varchar(200)','My_First_Category,My_Second_Category,My_Third_Category,'),
-            array('ht_show_sorting','varchar(3)','off'),
-            array('ht_show_filtering','varchar(3)','off'),
-            array('autoslide','varchar(3)','on'),
-            array('show_loading','varchar(3)','on'),
-            array('loading_icon_type','int(2)','1')
+            array('categories', 'varchar(200)', 'My_First_Category,My_Second_Category,My_Third_Category,'),
+            array('ht_show_sorting', 'varchar(3)', 'off'),
+            array('ht_show_filtering', 'varchar(3)', 'off'),
+            array('autoslide', 'varchar(3)', 'on'),
+            array('show_loading', 'varchar(3)', 'on'),
+            array('loading_icon_type', 'int(2)', '1')
         );
         global $wpdb;
-        $table_name = $wpdb->prefix."huge_itportfolio_portfolios" ;
-        foreach ($portfolio_new_columns as $portfolio_new_column){
-            if( !portfolio_gallery_isset_table_column( $table_name, $portfolio_new_column[0] ) ){
-                $query = "ALTER TABLE ".$table_name." ADD ".$portfolio_new_column[0]." ".$portfolio_new_column[1]." DEFAULT '".$portfolio_new_column[2]."'";
+        $table_name = $wpdb->prefix . "huge_itportfolio_portfolios";
+        foreach ($portfolio_new_columns as $portfolio_new_column) {
+            if (!portfolio_gallery_isset_table_column($table_name, $portfolio_new_column[0])) {
+                $query = "ALTER TABLE " . $table_name . " ADD " . $portfolio_new_column[0] . " " . $portfolio_new_column[1] . " DEFAULT '" . $portfolio_new_column[2] . "'";
                 $wpdb->query($query);
             }
         }
         global $wpdb;
-        $query = "SELECT ht_show_filtering FROM ".$wpdb->prefix."huge_itportfolio_portfolios WHERE id=1";
+        $query = "SELECT ht_show_filtering FROM " . $wpdb->prefix . "huge_itportfolio_portfolios WHERE id=1";
         $ht_show_filtering = $wpdb->get_var($query);
-        if( $ht_show_filtering != 'on'){
+        if ($ht_show_filtering != 'on') {
             $wpdb->update(
-                $wpdb->prefix."huge_itportfolio_portfolios",
+                $wpdb->prefix . "huge_itportfolio_portfolios",
                 array('ht_show_filtering' => 'off'),
                 array('id' => 1)
             );
         }
 
-        if ( ! get_option( 'portfolio_gallery_disable_right_click' ) ) {
-            update_option( 'portfolio_gallery_disable_right_click', 'off' );
+        if (!get_option('portfolio_gallery_disable_right_click')) {
+            update_option('portfolio_gallery_disable_right_click', 'off');
         }
     }
 
@@ -74,14 +79,15 @@ class Portfolio_Gallery_Install {
     /**
      * Install Portfolio Gallery.
      */
-    public static function install() {
+    public static function install()
+    {
         if (!defined('PORTFOLIO_GALLERY_INSTALLING')) {
             define('PORTFOLIO_GALLERY_INSTALLING', true);
         }
 
         self::create_tables();
-        if(!get_option( 'portfolio_gallery_version' ) ){
-            update_option( 'portfolio_gallery_lightbox_type', 'new_type' );
+        if (!get_option('portfolio_gallery_version')) {
+            update_option('portfolio_gallery_lightbox_type', 'new_type');
         }
         // Flush rules after install
         self::install_options();
@@ -89,7 +95,8 @@ class Portfolio_Gallery_Install {
         do_action('portfolio_gallery_installed');
     }
 
-    private static function create_tables() {
+    private static function create_tables()
+    {
         global $wpdb;
         $charset = $wpdb->get_charset_collate();
 
@@ -154,30 +161,44 @@ INSERT INTO
             $wpdb->query($sql_2);
         }
         if (!$wpdb->get_var("select count(*) from " . $wpdb->prefix . "huge_itportfolio_portfolios")) {
-        	$wpdb->insert(
-        		$table_name,
-		        array(
-			        'id' => 1,
-					'name' => 'My First Portfolio',
-					'sl_height' => 375,
-					'sl_width' => 600,
-					'pause_on_hover' => 'on',
-					'portfolio_list_effects_s' => '2',
-					'description' => '4000',
-					'param' => '1000',
-					'sl_position' => 'off',
-					'ordering' => 1,
-					'published' => '300',
-			        'categories'=>'My_First_Category,My_Second_Category,My_Third_Category,',
-		        )
-	        );
+            $wpdb->insert(
+                $table_name,
+                array(
+                    'id' => 1,
+                    'name' => 'My First Portfolio',
+                    'sl_height' => 375,
+                    'sl_width' => 600,
+                    'pause_on_hover' => 'on',
+                    'portfolio_list_effects_s' => '2',
+                    'description' => '4000',
+                    'param' => '1000',
+                    'sl_position' => 'off',
+                    'ordering' => 1,
+                    'published' => '300',
+                    'categories' => 'My_First_Category,My_Second_Category,My_Third_Category,',
+                )
+            );
         }
-        $table_name=$wpdb->prefix ."huge_itportfolio_images";
-        $row = $wpdb->get_results(  "SELECT `huge_it_loadDate` FROM `".$table_name ."`");
-        if(empty($row)){
-            $query="ALTER TABLE `".$table_name."` ADD `huge_it_loadDate` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ";
-            $wpdb->query($query);
+        $table_name = $wpdb->prefix . "huge_itportfolio_images";
+
+
+        if (!self::isset_table_column($table_name, "huge_it_loadDate")) {
+            $wpdb->query("ALTER TABLE `" . $table_name . "` ADD `huge_it_loadDate` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ");
         }
+       
+    }
+
+    private static function isset_table_column($table_name, $column_name)
+    {
+        global $wpdb;
+        $columns = $wpdb->get_results("SHOW COLUMNS FROM  " . $table_name, ARRAY_A);
+        foreach ($columns as $column) {
+            if ($column['Field'] == $column_name) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
 

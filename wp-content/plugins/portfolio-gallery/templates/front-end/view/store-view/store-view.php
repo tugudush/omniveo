@@ -54,7 +54,7 @@ if (isset($_GET['single_prod_id']) && isset($_GET['portfolio_id']) && $portfolio
                                         break;
                                     case 'vimeo':
                                         $videourl = portfolio_gallery_get_video_id_from_url($value);
-                                        $hash = unserialize(wp_remote_fopen("http://vimeo.com/api/v2/video/" . $videourl[0] . ".php"));
+                                        $hash = unserialize(wp_remote_fopen("https://vimeo.com/api/v2/video/" . $videourl[0] . ".php"));
                                         $imgsrc = $hash[0]['thumbnail_large'];
                                         ?>
                                         <a class="not_open p_responsive_lightbox"
@@ -110,7 +110,7 @@ if (isset($_GET['single_prod_id']) && isset($_GET['portfolio_id']) && $portfolio
                                 break;
                             case 'vimeo':
                                 $videourl = portfolio_gallery_get_video_id_from_url($imgurl[0]);
-                                $hash = unserialize(wp_remote_fopen("http://vimeo.com/api/v2/video/" . $videourl[0] . ".php"));
+                                $hash = unserialize(wp_remote_fopen("https://vimeo.com/api/v2/video/" . $videourl[0] . ".php"));
                                 $imgsrc = $hash[0]['thumbnail_large'];
                                 ?>
                                 <a class="p_responsive_lightbox"
@@ -291,7 +291,7 @@ if (isset($_GET['single_prod_id']) && isset($_GET['portfolio_id']) && $portfolio
                                     break;
                                 case 'vimeo':
                                     $videourl = portfolio_gallery_get_video_id_from_url($imgurl[0]);
-                                    $hash = unserialize(wp_remote_fopen("http://vimeo.com/api/v2/video/" . $videourl[0] . ".php"));
+                                    $hash = unserialize(wp_remote_fopen("https://vimeo.com/api/v2/video/" . $videourl[0] . ".php"));
                                     $imgsrc = $hash[0]['thumbnail_large']; ?>
                                     <a class="huge_it_portfolio_item pvimeo  "
                                        href="<?php echo $product_page_link; ?>" <?php if ($row->link_target == "on") {

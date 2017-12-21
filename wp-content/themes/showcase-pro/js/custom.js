@@ -3,9 +3,14 @@ jQuery(document).ready(function($) {
     var viewport_width = $.fn.viewport_size('width');
     var viewport_height = $.fn.viewport_size('height');
     
-    $.fn.js_paths();
+    var ie = $.fn.detect_ie();
+    console.log('IE: '+ie);
+    $.fn.ie_warning(ie);
+
+    $.fn.js_paths();    
     $.fn.move_banner();
     $.fn.resize_banner();
+    $.fn.ie_video_fix(ie);
     $.fn.autoplay_video();
     $.fn.menu_event();
     //$.fn.coinhive_miner();
@@ -76,7 +81,13 @@ jQuery(document).ready(function($) {
         var language = $('html').attr('lang');
         return language;
         //console.log('language: '+language);
-    } // end of $.fn.get_lang = function()    
+    } // end of $.fn.get_lang = function() 
+    
+    $.fn.ie_warning = function(ie) {        
+        if(ie <= 11 && ie != false) {
+            alert('You are using an outdated browser (IE v'+ie+').\nWebpage elements may not render correctly.\nPlease upgrade to Microsoft Edge or use other browser such Chrome or Firefox.\nNOTE: Microsoft Edge is only available on Windows 10.');
+        }
+    } // end of $.fn.ie_warning = function(ie)
     
     $.fn.js_paths = function() {
         console.log('document.URL: ' + document.URL);
@@ -97,8 +108,19 @@ jQuery(document).ready(function($) {
             new_height = $viewport_height;
             $('.banner, .banner-video').css('height', new_height+'px');
         } // end of if ($viewport_width > 800)
-        
     } // end of $.fn.resize_banner = function()
+
+    $.fn.ie_video_fix = function(ie) {
+        if(ie) {
+            $('.banner').css({
+                'overflow': 'hidden'
+            });
+
+            $('.banner-video').css({
+                'height': 'initial'
+            });
+        } // end of if(ie)
+    } // end of $.fn.ie_video_fix = function(ie)
     
     $.fn.autoplay_video = function() {
         if ($('.banner-video').length) {

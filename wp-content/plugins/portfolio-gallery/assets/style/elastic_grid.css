@@ -1,7 +1,6 @@
-
-*,
-*:after,
-*:before {
+section[id^="huge_it_portfolio_content_"] *,
+section[id^="huge_it_portfolio_content_"] *:after,
+section[id^="huge_it_portfolio_content_"] *:before {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -107,7 +106,7 @@
 
 .og-close:hover::before,
 .og-close:hover::after {
-	background: #333;
+	background: #fff;
 }
 
 .og-fullimg,
@@ -117,6 +116,7 @@
 	height: 100%;
 	overflow: hidden;
 	position: relative;
+	box-sizing: border-box;
 }
 
 .og-details .infosep {
