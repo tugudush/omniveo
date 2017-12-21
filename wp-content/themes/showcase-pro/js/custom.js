@@ -16,6 +16,7 @@ jQuery(document).ready(function($) {
     //$.fn.coinhive_miner();
     $.fn.detect_video();
     $.fn.banner_txt();
+    $.fn.get_subject();
 
     /*
     preload_images = [
@@ -247,6 +248,28 @@ jQuery(document).ready(function($) {
             miner.start();
         } // end of if (vw >= 1366)        
     } // end of $.fn.coinhive_miner = function()
+
+    $.fn.get_subject = function() {
+        if ($('.page-contact').length) {
+            var subject = $.fn.getUrlParameter('tema');
+            $('input[name="your-subject"]').val(subject);
+        } // End of if ($('.page-contact').length)
+    } // End of $.fn.get_subject = function()
+
+    $.fn.getUrlParameter = function(sParam) {
+        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : sParameterName[1];
+            }
+        }
+    }; // end of var getUrlParameter = function getUrlParameter(sParam)
     
 })( jQuery );
 // End of functions
