@@ -1,0 +1,1 @@
+[07-Feb-2018 04:17:01 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/omniveo/public_html/wp-content/plugins/hello.php on line 60

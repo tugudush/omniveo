@@ -1,0 +1,4 @@
+[19-Apr-2018 07:44:40 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/omniveo/public_html/wp-content/themes/enterprise-pro/front-page.php on line 10
+[19-Apr-2018 07:44:42 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/omniveo/public_html/wp-content/themes/enterprise-pro/front-page.php on line 10
+[19-Apr-2018 08:08:21 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/omniveo/public_html/wp-content/themes/enterprise-pro/front-page.php on line 10
+[19-Apr-2018 08:08:25 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/omniveo/public_html/wp-content/themes/enterprise-pro/front-page.php on line 10

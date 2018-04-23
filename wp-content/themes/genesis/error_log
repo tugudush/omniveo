@@ -1,0 +1,9 @@
+[05-Mar-2018 05:42:59 UTC] PHP Fatal error:  Call to undefined function remove_action() in /home/omniveo/public_html/wp-content/themes/genesis/404.php on line 15
+[05-Mar-2018 05:42:59 UTC] PHP Fatal error:  Call to undefined function remove_action() in /home/omniveo/public_html/wp-content/themes/genesis/404.php on line 15
+[25-Mar-2018 12:45:43 UTC] PHP Fatal error:  Call to undefined function do_action() in /home/omniveo/public_html/wp-content/themes/genesis/header.php on line 14
+[25-Mar-2018 12:45:44 UTC] PHP Fatal error:  Call to undefined function do_action() in /home/omniveo/public_html/wp-content/themes/genesis/header.php on line 14
+[26-Mar-2018 05:03:26 UTC] PHP Fatal error:  Call to undefined function genesis() in /home/omniveo/public_html/wp-content/themes/genesis/index.php on line 15
+[08-Apr-2018 07:27:28 UTC] PHP Fatal error:  Call to undefined function remove_action() in /home/omniveo/public_html/wp-content/themes/genesis/404.php on line 15
+[08-Apr-2018 07:27:28 UTC] PHP Fatal error:  Call to undefined function remove_action() in /home/omniveo/public_html/wp-content/themes/genesis/404.php on line 15
+[10-Apr-2018 08:41:48 UTC] PHP Fatal error:  Call to undefined function remove_action() in /home/omniveo/public_html/wp-content/themes/genesis/404.php on line 15
+[10-Apr-2018 08:41:49 UTC] PHP Fatal error:  Call to undefined function remove_action() in /home/omniveo/public_html/wp-content/themes/genesis/404.php on line 15
